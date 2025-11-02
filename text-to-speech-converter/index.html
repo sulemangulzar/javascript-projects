@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Text-To-Speech Converter</title>
+
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body background="./images/norbert-kowalczyk-24R-2bFSImI-unsplash.jpg" class="bg-cover font-poppins">
+  <h1 class="text-5xl text-white text-center mt-32 font-bold mb-12">
+    Text-To-Speech-<span class="text-blue-500">Converter</span>
+  </h1>
+
+  <div class="flex flex-col items-center justify-center gap-4">
+    <textarea class="bg-white/70 w-[650px] h-[350px] rounded-lg p-2 outline-blue-500 outline-4 resize-none no-scrollbar" placeholder="Enter Your Text......."></textarea>
+    
+    <div class="flex items-center justify-center gap-2">
+      <select id="voices" class="relative w-[550px] h-[40px] bg-white/70 rounded-full outline-0 p-2 text-gray-800"></select>
+      <button class="px-8 py-2 text-white text-center bg-blue-600 rounded-full">Listen</button>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
