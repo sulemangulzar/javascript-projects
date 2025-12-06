@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-black">
+
+    <div class="w-[350px] max-w-full h-[650px] bg-black p-4 rounded-[20px]">
+        <div class="w-full h-[80px] flex justify-end items-center mt-20">
+            <input id="display" type="text" placeholder="0"
+                class="w-full h-full bg-transparent outline-none border-none text-white text-5xl text-right placeholder:text-white">
+        </div>
+        <div class="flex items-center justify-center gap-3 mt-4">
+            <div class="flex flex-col gap-3">
+                <button onclick="ClickToCorrect()" class="btn bg-white/40">C</button>
+                <button onclick="ClickToDisplay('7')" class="btn bg-white/20">7</button>
+                <button onclick="ClickToDisplay('4')" class="btn bg-white/20">4</button>
+                <button onclick="ClickToDisplay('1')" class="btn bg-white/20">1</button>
+                <button onclick="SumAndSubtract()" class="btn bg-white/20">+/-</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <button onclick="ClickToErase()" class="btn bg-white/40">AC</button>
+                <button onclick="ClickToDisplay('8')" class="btn bg-white/20">8</button>
+                <button onclick="ClickToDisplay('5')" class="btn bg-white/20">5</button>
+                <button onclick="ClickToDisplay('2')" class="btn bg-white/20">2</button>
+                <button onclick="ClickToDisplay('0')" class="btn bg-white/20">0</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <button onclick="ClickToDisplay('%')" class="btn bg-white/40">%</button>
+                <button onclick="ClickToDisplay('9')" class="btn bg-white/20">9</button>
+                <button onclick="ClickToDisplay('6')" class="btn bg-white/20">6</button>
+                <button onclick="ClickToDisplay('3')" class="btn bg-white/20">3</button>
+                <button onclick="ClickToDisplay('.')" class="btn bg-white/20">.</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <button onclick="ClickToDisplay('/')" class="btn bg-yellow-600">÷</button>
+                <button onclick="ClickToDisplay('*')" class="btn bg-yellow-600">×</button>
+                <button onclick="ClickToDisplay('-')" class="btn bg-yellow-600">-</button>
+                <button onclick="ClickToDisplay('+')" class="btn bg-yellow-600">+</button>
+                <button onclick="Calculate()" class="btn bg-yellow-600">=</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.btn').forEach(b => {
+            b.classList.add(
+                "w-[76px]", "h-[76px]", "rounded-full",
+                "flex", "justify-center", "items-center",
+                "text-white", "text-3xl", "active:scale-95"
+            );
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
