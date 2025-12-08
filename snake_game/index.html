@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .block {
+            height: 30px;
+            width: 30px;
+            border: 1px solid grey;
+            text-decoration: white;
+        }
+
+        .fill {
+            background-color: white;
+        }
+
+        .food {
+            background-color: red;
+        }
+
+        .starting-modal,
+        .gameover-modal {
+            display: none;
+        }
+
+
+    </style>
+</head>
+
+<body class="relative w-full min-h-screen bg-black flex flex-col items-center justify-center">
+    <h1 class="text-4xl text-center my-2 font-bold text-rose-500 font-mono underline decoration-sky-500">Snake Game</h1>
+    <section class="w-[350px] md:w-auto border-2 rounded-md border-lime-500 m-2">
+        <div class="info flex items-center justify-between gap-1 m-2">
+            <div class="highScore text-white w-[150px] h-8 border-2 rounded-md border-yellow-500 text-start  p-1">High
+                Score: 0</div>
+            <div class="currentScore text-white w-[110px] h-8 border-2 rounded-md border-sky-500 text-start p-1">Score:
+                0</div>
+            <div class="currentTime text-white w-[110px] h-8 border-2 rounded-md border-pink-500 text-start p-1">Time: 0
+            </div>
+        </div>
+        <div
+            class="board grid grid-rows w-[350px] md:w-[550px] xl:w-[700px] 2xl:w-[1000px] h-[500px] md:h-[650px] p-1 text-white text-[10px]">
+        </div>
+    </section>
+    <div class="absolute starting-modal hidden bg-black h-[300px] w-[300px] text-center py-12 z-40 ">
+        <div class="flex flex-col items-center justify-center gap-4">
+            <h1 class="text-3xl text-center my-2 font-bold text-rose-500 font-mono underline decoration-sky-500">Welcome
+                To Snake Game</h1>
+            <button onclick="startGame()" class="p-2 text-center border-1 rounded-md border-sky-500 text-white">Start
+                Game</button>
+        </div>
+    </div>
+    <div class="absolute gameover-modal hidden bg-black h-[300px] w-[300px] text-center py-12 z-40 ">
+        <div class="flex flex-col items-center justify-center gap-4">
+            <h1 class="text-3xl text-center my-2 font-bold text-rose-500 font-mono underline decoration-sky-500">Game
+                Over</h1>
+            <button onclick="tryAgain()" class="p-2 text-center border-1 rounded-md border-sky-500 text-white">Try
+                Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
