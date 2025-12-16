@@ -4,4 +4,4 @@
 | :--- | :--- | :--- |
 | **Next Task Check** | A productivity todo app built with Next.js. | [View App 🚀](https://next-task-check.vercel.app/) |
 | **Classic Snake X** | A retro arcade snake game. | [Play Now 🐍](https://classic-snake-x.vercel.app/) |
-| **Neon Image Editor** | A browser-based image editing tool. | [Edit Photos 🎨](https://image-editor-neon-psi.vercel.app/) |
+| **Image Editor** | A browser-based image editing tool. | [Edit Photos 🎨](https://image-editor-neon-psi.vercel.app/) |
